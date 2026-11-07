@@ -1,0 +1,13 @@
+{
+  "name": "Quillsheet",
+  "short_name": "Quillsheet",
+  "description": "A private, offline-friendly D&D 5e character sheet with homebrew import and level-up tracking.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#17130f",
+  "theme_color": "#9b2c2c",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

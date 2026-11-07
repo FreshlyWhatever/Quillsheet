@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="color-scheme" content="light dark">
+  <title>Quillsheet Privacy Policy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13z"/><path class="facet" d="M16 8l7 12H9z"/></svg>
+      <span>Quillsheet</span>
+    </a>
+  </header>
+  <main class="main policy" id="main">
+    <article class="card">
+      <h1>Privacy Policy</h1>
+      <p class="muted">Last updated: 6 November 2026</p>
+
+      <h2>The short version</h2>
+      <p><strong>Quillsheet does not collect, store, or share any personal data.</strong> There are no accounts, no analytics, no cookies, no advertising and no server. Your characters stay in your own browser, and nothing leaves it unless you export a file yourself.</p>
+
+      <h2>1. What we collect</h2>
+      <p>Nothing. Quillsheet is a set of static files (HTML, CSS and JavaScript) that runs entirely in your web browser. The app never sends what you type, paste or import to us or to anyone else.</p>
+      <p>The page includes a Content Security Policy with <code>connect-src 'none'</code>, which tells your browser to block the app from sending anything over the network. You can confirm this yourself in your browser's developer tools (Network tab). The only downloads are Quillsheet's own files, from the same address you opened it at, so it can run and keep an offline copy of itself.</p>
+
+      <h2>2. Where your characters are stored</h2>
+      <ul>
+        <li><strong>Browser storage (localStorage):</strong> your character sheets, your homebrew library and small preferences (such as the last character you opened, theme, text size and dice settings) are saved in your browser's local storage on this device. Only pages from the same site address can read it.</li>
+        <li><strong>Offline copy (service worker and cache):</strong> so Quillsheet opens with no internet, your browser keeps a copy of the site's own files (pages, styles, code and rules content) on this device. It contains none of your characters or anything you type.</li>
+        <li><strong>Files you export:</strong> when you choose "Download file" or "Back up all characters", a file is saved to your device. What happens to it afterwards (for example, emailing it to your DM) is up to you.</li>
+        <li><strong>Encrypted exports:</strong> if you choose an encrypted export, the file is locked with AES-256-GCM using a key derived from your passphrase (PBKDF2-SHA-256, 250,000 iterations). The passphrase is never stored. If you forget it, the file cannot be recovered.</li>
+      </ul>
+
+      <h2>3. Importing homebrew</h2>
+      <p>The Import Homebrew feature reads text or JSON that <em>you</em> copy and paste, or a file you choose. It understands common community formats, such as the JSON used by 5etools. Quillsheet does not connect to 5etools, any official Wizards of the Coast website, or any other site, and those sites are not told that you use Quillsheet. Content you copy from elsewhere stays covered by its own terms and licences.</p>
+
+      <h2>4. Hosting</h2>
+      <p>If you use a copy of Quillsheet hosted on a web server, that server may keep standard access logs (such as IP address, time and requested file), as every web server does. Those logs come from the hosting setup, not from the app, and they never include character data, because that data never leaves your browser. Whoever hosts the copy should say how long they keep those logs. Opening Quillsheet from files on your own computer involves no server at all.</p>
+
+      <h2>5. Deleting your data</h2>
+      <ul>
+        <li>Delete a single character with the 🗑 button on its sheet.</li>
+        <li>Delete everything by clearing this site's data in your browser settings ("Cookies and site data" or "Website data").</li>
+      </ul>
+      <p>Because we never had your data, there is nothing for us to delete on our side.</p>
+
+      <h2>6. Children</h2>
+      <p>Quillsheet collects no personal information from anyone, including children under 13 (or the minimum age in your country).</p>
+
+      <h2>7. About this project</h2>
+      <p>Quillsheet is a non-commercial passion project, made to help busy people spend less time on bookkeeping and more time on the fun (and genuinely hard) parts of D&amp;D: playing the character, making choices and telling the story together.</p>
+      <p>Its only goal is a better character-sheet experience. Keeping everything on your device keeps it fast, makes it work offline once loaded, and means there is no account to break into and no data to leak.</p>
+      <p class="muted">Quillsheet is unofficial fan content. It is not affiliated with, endorsed by or sponsored by Wizards of the Coast or 5etools. Dungeons &amp; Dragons is a trademark of Wizards of the Coast LLC.</p>
+
+      <h2>8. Rules content credits</h2>
+      <p>Quick Build includes free, openly licensed rules content. It's bundled with the app, so loading it sends no data anywhere.</p>
+      <ul>
+        <li><strong>2014 rules:</strong> This work includes material taken from the System Reference Document 5.1 ("SRD 5.1") by Wizards of the Coast LLC, available at <a href="https://dnd.wizards.com/resources/systems-reference-document" rel="noopener noreferrer">dnd.wizards.com/resources/systems-reference-document</a>. The SRD 5.1 is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/legalcode" rel="noopener noreferrer">Creative Commons Attribution 4.0 International License</a>.</li>
+        <li><strong>2024 rules:</strong> This work includes material taken from the System Reference Document 5.2 ("SRD 5.2") by Wizards of the Coast LLC, available at <a href="https://www.dndbeyond.com/srd" rel="noopener noreferrer">dndbeyond.com/srd</a>. The SRD 5.2 is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/legalcode" rel="noopener noreferrer">Creative Commons Attribution 4.0 International License</a>.</li>
+        <li><strong>Data format:</strong> the SRD content was converted from the <a href="https://github.com/5e-bits/5e-srd-api" rel="noopener noreferrer">5e SRD API</a> database by 5e-bits (MIT License, © 2018–2020 Adrian Padua, Christopher Ward). The material was reformatted and abridged. Full notices are in THIRD_PARTY_NOTICES.md.</li>
+      </ul>
+      <p><strong>Font credit:</strong> Easy-read text uses <a href="https://opendyslexic.org" rel="noopener noreferrer">OpenDyslexic</a> by Abbie Gonzalez, licensed under the SIL Open Font License 1.1. It's bundled with the app, so using it sends no data anywhere. The licence is included as <a href="fonts/OFL.txt">fonts/OFL.txt</a>.</p>
+
+      <h2>9. Changes to this policy</h2>
+      <p>If this policy ever changes (for example, if optional cloud sync were added), the change will be announced in the app, and any new data use would be strictly opt-in. The date at the top of this page shows the latest revision.</p>
+
+      <h2>10. Contact</h2>
+      <p>Questions about this policy can be raised with the person or team who hosts your copy of Quillsheet. <span class="muted">(Hosts: add your contact details here before publishing.)</span></p>
+
+      <p class="btn-row"><a class="btn primary" href="index.html">Back to Quillsheet</a></p>
+    </article>
+  </main>
+</body>
+</html>

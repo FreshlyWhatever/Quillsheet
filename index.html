@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- No network access at all: the page cannot send data anywhere. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="description" content="Quillsheet: a private, offline-friendly D&D 5e character sheet with homebrew import and level-up tracking.">
+  <meta name="color-scheme" content="light dark">
+  <title>Quillsheet</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 29 9.5v13L16 30 3 22.5v-13z' fill='%239b2c2c'/%3E%3Cpath d='M16 8l7 12H9z' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#9b2c2c">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to character sheet</a>
+
+  <header class="topbar">
+    <button type="button" class="icon-btn only-mobile" data-action="toggle-roster" aria-label="Show characters" aria-expanded="false" aria-controls="roster">☰</button>
+    <a class="brand" href="./" aria-label="Quillsheet home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 29 9.5v13L16 30 3 22.5v-13z"/><path class="facet" d="M16 8l7 12H9z"/></svg>
+      <span>Quillsheet</span>
+    </a>
+    <span id="save-status" class="save-status" role="status"></span>
+    <button type="button" class="icon-btn" data-action="display" aria-label="Text size and easy-read settings" title="Text size and easy-read">Aa</button>
+    <button type="button" class="icon-btn" data-action="toggle-theme" aria-label="Switch light or dark theme" title="Light / dark">◐</button>
+  </header>
+
+  <div class="layout">
+    <aside id="roster" class="roster" aria-label="Your characters">
+      <div class="roster-actions">
+        <button type="button" class="btn primary block" data-action="quick-build">⚡ Quick Build</button>
+        <button type="button" class="btn block" data-action="import-library">📥 Import Homebrew</button>
+        <button type="button" class="btn block" data-action="new-character">✏️ Fully custom</button>
+        <button type="button" class="btn block" data-action="open-file">📂 Open saved file</button>
+        <input type="file" id="file-input" accept=".json,application/json" hidden>
+      </div>
+      <h2 class="roster-heading">Characters</h2>
+      <ul id="roster-list" class="roster-list"></ul>
+      <div class="roster-foot">
+        <button type="button" class="link-btn" data-action="homebrew-library">Homebrew library</button><br>
+        <button type="button" class="link-btn" data-action="export-all">Back up all characters</button>
+        <p><a href="privacy.html">Privacy policy</a></p>
+      </div>
+    </aside>
+    <div class="scrim" data-action="toggle-roster" hidden></div>
+    <main id="main" class="main" tabindex="-1"></main>
+  </div>
+
+  <nav id="bottom-nav" class="bottom-nav" aria-label="Sheet sections" hidden></nav>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+  <div id="drop-overlay" class="drop-overlay" hidden><div>Drop a character or homebrew .json file to open it</div></div>
+
+  <noscript><p class="noscript">Quillsheet needs JavaScript to run. Nothing is sent to a server, because everything runs in your browser.</p></noscript>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/importer.js"></script>
+  <script src="js/quickbuild.js"></script>
+  <script src="js/homebrew.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
